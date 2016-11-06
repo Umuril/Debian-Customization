@@ -1,0 +1,27 @@
+https://wiki.archlinux.org/index.php/GRUB_(Italiano)#Richiamare_l.27ultimo_sistema_avviato
+nano /etc/default/grub
+GRUB_DEFAULT=saved
+GRUB_SAVEDEFAULT=true
+
+GRUB_TIMEOUT=-1
+
+update-grub # or grub-mkconfig -o /mnt/grub/grub.cfg
+
+
+## Setting the chainloader
+
+cd /etc/grub.d
+sudo chmod +x 00_header 05_debian_theme 40_custom
+sudo chmod -x 10_linux 20_linux_xen 30_os-prober 30_uefi-firmware 41_custom
+
+# Example
+menuentry "Debian" {
+        set root=(hd0,3) # I numeri corrispondono (non esiste hd0,0)
+        chainloader +1
+}
+
+mount /dev/sda1 /mnt
+
+update-grub # or grub-mkconfig -o /mnt/grub/grub.cfg
+
+umount /mnt

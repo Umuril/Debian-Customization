@@ -1,0 +1,15 @@
+# History search mode
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# This example prefixes the line with sudo , if Alt+S is pressed. It's safer because it won't input the Enter key.
+"\es":"\C-asudo \C-e"
+
+# Due to an update to readline, the terminal now echoes ^C after Ctrl+C is pressed. For users who wish to disable this
+set echo-control-characters off
+
+# The double tab can be changed to a single tab by setting
+set show-all-if-unmodified on
+
+# Partially complete the word and show all possible completions if it is still ambiguous 
+set show-all-if-ambiguous on
