@@ -1,0 +1,9 @@
+#
+su
+visudo
+# Uncomment?
+%sudo   ALL=(ALL:ALL) ALL
+adduser username sudo
+passwd -d root
+passwd -l root
+
