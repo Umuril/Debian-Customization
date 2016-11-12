@@ -1,0 +1,42 @@
+# Desktop environment
+# https://wiki.archlinux.org/index.php/Desktop_environment
+
+Not use a desktop enviorment, it's just a group of packages from same company and i just want to CUSTOMIZE! muahahaha
+
+# Windows Manager
+# https://en.wikipedia.org/wiki/Comparison_of_X_window_managers
+Let's try i3 ;)
+
+# Taskbar
+# Can't (mostly don't want) find a comparison
+gnome-shell is not that bad :)
+
+# Terminal emulator
+# https://www.slant.co/topics/794/~linux-terminal-emulators
+Let's try rxvt-unicode
+Seems to have scrollbar and auto warp text
+# Keep in mind ROXTerm
+
+# File manager
+# https://www.slant.co/topics/2090/~linux-file-managers
+Let's try dolphin
+
+# Calculator
+Just use bc when needed
+
+# Text editor
+# https://www.slant.co/topics/12/~programming-text-editors
+Atom 
+
+# Image viewer
+# Don't use it really much.
+Just use eog, i'll try them later
+
+# Media player 
+VLC, don't want to look other for now
+
+# Web browser
+Firefox, i like it on Linux
+
+# Display manager 
+GDM or LightDM? Install both and then choose
