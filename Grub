@@ -5,14 +5,14 @@ GRUB_SAVEDEFAULT=true
 
 GRUB_TIMEOUT=-1
 
-update-grub # or grub-mkconfig -o /mnt/grub/grub.cfg
+update-grub # or grub-mkconfig -o /boot/grub/grub.cfg
 
 
 ## Setting the chainloader
 
 cd /etc/grub.d
 sudo chmod +x 00_header 05_debian_theme 40_custom
-sudo chmod -x 10_linux 20_linux_xen 30_os-prober 30_uefi-firmware 41_custom
+sudo chmod -x 10_linux 20_linux_xen 30_os-prober 30_uefi-firmware 41_custom # 41_custom where?
 
 # Example
 menuentry "Debian" {
@@ -20,8 +20,8 @@ menuentry "Debian" {
         chainloader +1
 }
 
-mount /dev/sda1 /mnt
+mount /dev/sda1 /boot
 
-update-grub # or grub-mkconfig -o /mnt/grub/grub.cfg
+update-grub # or grub-mkconfig -o /boot/grub/grub.cfg
 
-umount /mnt
+umount /boot
