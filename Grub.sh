@@ -10,16 +10,14 @@ echo "File /etc/default/grub modified."
 grep -q -F 'menuentry "Debian" {' /etc/grub.d/40_custom || cat << EOF >> /etc/grub.d/40_custom
 
 menuentry "Debian" {
-        set root=(hd0,2)
-        chainloader +1
+        chainloader (hd0,2)+1 # oppure msdos2
 }
 EOF
 
 grep -q -F 'menuentry "Kali" {' /etc/grub.d/40_custom || cat << EOF >> /etc/grub.d/40_custom
 
 menuentry "Kali" {
-        set root=(hd0,3)
-        chainloader +1
+        chainloader (hd0,3)+1 # oppure msdos2
 }
 EOF
 
@@ -38,4 +36,4 @@ umount /boot
 chmod +x /etc/grub.d/00_header /etc/grub.d/05_debian_theme /etc/grub.d/10_linux /etc/grub.d/20_linux_xen /etc/grub.d/41_custom
 chmod -x /etc/grub.d/30_os-prober /etc/grub.d/30_uefi-firmware /etc/grub.d/40_custom
 
-update-grub
+# update-grub # not always needed
