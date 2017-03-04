@@ -30,6 +30,7 @@ chmod -x /etc/grub.d/10_linux /etc/grub.d/20_linux_xen /etc/grub.d/30_os-prober 
 
 mount /dev/sda1 /boot
 
+grub-install /dev/sda
 update-grub
 
 umount /boot
